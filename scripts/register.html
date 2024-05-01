@@ -8,7 +8,7 @@
     <title>Register</title>
 </head>
 <body>
-    <div id="nav_placeholder">
+    <div class="container">
         <nav class="bg-light border navbar navbar-expand-md navbar-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/" style="font-size: 24px; font-weight: bold; font-family: 'Bebas Neue', sans-serif;">Rookie Jersies</a>
@@ -20,7 +20,7 @@
                     <ul class="navbar-nav me-auto mt-2">
                         <li class="nav-item"><a class="nav-link" href="/scripts/index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="/scripts/products.html">Products</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/css/styles.css">Checkout</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/scripts/checkout.html">Checkout</a></li>
                     </ul>
                     <ul class="navbar-nav ms-auto mt-2">
                         <!-- Show login and register buttons if user is not logged in -->
@@ -47,15 +47,49 @@
             document.getElementById("registerNav").style.display = "block"; // Show register button
         }
     </script>
-    <h1>Register</h1>
-    <form id="registerForm">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        <button type="submit">Register</button>
-    </form>
-    <p id="registerMessage"></p>
+    <div class="login_container">
+        <h1>Register</h1>
+        <form id="loginForm">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required><br><br>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <label for="password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+            <div class="form-group">
+                <label for="hear_about_us">How did you hear about us?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="hear_about_us" id="hear_radio1" value="social_media">
+                    <label class="form-check-label" for="hear_radio1">
+                        Social Media
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="hear_about_us" id="hear_radio2" value="word_of_mouth">
+                    <label class="form-check-label" for="hear_radio2">
+                        Word of Mouth
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="hear_about_us" id="hear_radio3" value="internet_search">
+                    <label class="form-check-label" for="hear_radio3">
+                        Internet Search
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="hear_about_us" id="hear_radio4" value="other">
+                    <label class="form-check-label" for="hear_radio3">
+                        Other
+                    </label>
+                </div>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <p id="registerMessage" style="color: red;"></p>
+   
 
     <script>
         document.getElementById("registerForm").addEventListener("submit", function(event) {
