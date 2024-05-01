@@ -19,13 +19,13 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="navbar-nav me-auto mt-2">
-                        <li class="nav-item"><a class="nav-link" href="/index">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/scripts/index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="/scripts/products.html">Products</a></li>
                         <li class="nav-item"><a class="nav-link" href="/css/styles.css">Checkout</a></li>
                     </ul>
                     <ul class="navbar-nav ms-auto mt-2">
                         <!-- Show login and register buttons if user is not logged in -->
-                        <li class="nav-item" id="loginNav" style="display: none;"><a class="nav-link" href="/Users/shaan.malhotra/Desktop/CLI_stuff/scripts/index.html">Login</a></li>
+                        <li class="nav-item" id="loginNav" style="display: none;"><a class="nav-link" href="/scripts/login.html">Login</a></li>
                         <li class="nav-item" id="registerNav" style="display: none;"><a class="nav-link" href="/scripts/register.html">Register</a></li>
                         <!-- Show logout button if user is logged in -->
                         <li class="nav-item" id="logoutNav" style="display: none;"><a class="nav-link" href="#" id="logout">Log Out</a></li>
@@ -34,29 +34,58 @@
             </div>
         </nav>
     </div>
-    
-    
-    <script>
-        // Check login state
-        var isLoggedIn = localStorage.getItem("currentUser");
-    
-        // Show or hide login, register, and logout buttons based on login state
-        if (isLoggedIn) {
-            document.getElementById("logoutNav").style.display = "block"; // Show logout button
-        } else {
-            document.getElementById("loginNav").style.display = "block"; // Show login button
-            document.getElementById("registerNav").style.display = "block"; // Show register button
-        }
-    </script>
 
-    <h1 style="font-size:60px; text-align:center;">
-        Welcome to Rookie Jersey!
-    </h1>
-    <p>
-        This is a Website for you to shop for jerseys of the next biggest NFL stars! Click the products tab to see what we have to offer.
-    </p>
-    <img src="/images/home_image.jpg">
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Welcome to Rookie Jerseys!</h1>
+            <p class="lead">Shop for authentic NFL jerseys of the next biggest stars.</p>
+            <img src="/images/home_image.jpg" class="img-fluid" alt="NFL Jerseys">
+        </div>
+    </div>
 
+    <!-- Main content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2>Discover Our Collection</h2>
+                <p>Welcome to Rookie NFL Jerseys, your premier destination for authentic and stylish jerseys of the NFL's rising stars! Whether you're a die-hard fan looking to represent your favorite team's newest addition or a collector seeking the next big thing, we've got you covered with our diverse range of rookie jerseys.</p>
+            </div>
+            <div class="col-lg-6">
+                <h2>Quality Craftsmanship</h2>
+                <p>Each jersey in our collection is crafted with meticulous attention to detail and made from premium materials to ensure both comfort and durability. With officially licensed merchandise and an easy-to-navigate shopping experience, Rookie NFL Jerseys is your one-stop shop for authentic rookie apparel.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="jersey-list">
+            <h2 class="text-center">Jerseys Currently Offered</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul>
+                        <li>Caleb Williams - Chicago Bears</li>
+                        <li>Jayden Daniels - Washington Commanders</li> <!-- Updated pick -->
+                        <li>Drake Maye - New England Patriots</li>
+                        <li>Marvin Harrison Jr - Arizona Cardinals</li>
+                        <li>Joe Alt - Los Angeles Chargers</li>
+                    </ul>
+                </div>
+                <div style="text-align:right" class="col-md-6">
+                    <ul>
+                        <li>Malik Nabers - New York Giants</li>
+                        <li>JC Latham - Tennessee Titans</li>
+                        <li>Michael Penix Jr - Atlanta Falcons</li>
+                        <li>Rome Odunze- Chicago Bears</li>
+                        <li>JJ McCarthy - Minnesota Vikings</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p>&copy; 2024 Rookie Jerseys. All rights reserved.</p>
+    </footer>
     <script>
         // Function to toggle login/logout state
         function toggleLoginState() {
@@ -70,6 +99,17 @@
             }
             // Reload the page to reflect the change
             location.reload();
+        }
+
+        // Check login state
+        var isLoggedIn = localStorage.getItem("currentUser");
+    
+        // Show or hide login, register, and logout buttons based on login state
+        if (isLoggedIn) {
+            document.getElementById("logoutNav").style.display = "block"; // Show logout button
+        } else {
+            document.getElementById("loginNav").style.display = "block"; // Show login button
+            document.getElementById("registerNav").style.display = "block"; // Show register button
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
