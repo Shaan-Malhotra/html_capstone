@@ -86,32 +86,6 @@
     <footer class="bg-dark text-white text-center py-4 mt-5 container">
         <p>&copy; 2024 Rookie Jerseys. All rights reserved.</p>
     </footer>
-    <script>
-        // Function to toggle login/logout state
-        function toggleLoginState() {
-            var isLoggedIn = localStorage.getItem("isLoggedIn");
-            if (isLoggedIn) {
-                // If logged in, log out
-                localStorage.removeItem("isLoggedIn");
-            } else {
-                // If not logged in, log in
-                localStorage.setItem("isLoggedIn", "true");
-            }
-            // Reload the page to reflect the change
-            location.reload();
-        }
-
-        // Check login state
-        var isLoggedIn = localStorage.getItem("currentUser");
-    
-        // Show or hide login, register, and logout buttons based on login state
-        if (isLoggedIn) {
-            document.getElementById("logoutNav").style.display = "block"; // Show logout button
-        } else {
-            document.getElementById("loginNav").style.display = "block"; // Show login button
-            document.getElementById("registerNav").style.display = "block"; // Show register button
-        }
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
